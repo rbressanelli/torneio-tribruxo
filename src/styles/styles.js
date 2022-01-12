@@ -3,7 +3,9 @@ import Image from "next/image";
 
 export const Title = styled.h1`
   font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.title};
+  margin: 5px;
+  text-shadow: 0px 0px 39px rgba(255,255,255,1);
 `
 export const Button = styled.button`
     background-image: linear-gradient(to right, #e52d27 0%, #871717  51%, #e52d27  100%)}        
@@ -115,9 +117,3 @@ export const Main = styled.main`
   align-items: center;
 
 `
-
-export const Title = styled.h1`
-  color: #f5f5f5;
-  margin: 5px;
-  text-shadow: 0px 0px 39px rgba(255,255,255,1);
-`;
