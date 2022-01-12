@@ -1,4 +1,4 @@
-import { CardContainer, Container, ImageContainer } from "../../../styles/styles";
+import { CardContainer, Container, ImageContainer } from "../../styles/styles";
 import Image from "next/image";
 import Gryff from "../../assets/gryffindor.png";
 import Huff from "../../assets/hufflepuff.png";

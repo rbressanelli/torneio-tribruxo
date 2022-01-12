@@ -1,5 +1,5 @@
 import Card from "../Card";
-import { StudentsContext } from "../../context/students";
+import { StudentsContext } from "../../contexts/students";
 import { useContext } from "react";
 
 const CharactersList = () => {
