@@ -14,5 +14,11 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.12.0"
-  }
+  },
+  "name": "torneio-tribruxo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Roberto Bressanelli <rbressanelli@gmail.com>",
+  "license": "MIT",
+  "repository": "git@github.com:rbressanelli/torneio-tribruxo.git"
 }
