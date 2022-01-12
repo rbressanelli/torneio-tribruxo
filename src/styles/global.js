@@ -19,6 +19,6 @@ export const GlobalStyle = createGlobalStyle`
 export const theme = {
   colors: {
     primary: '#0070f3',
-    secondary: '#f00'
+    title: '#f5f5f5'
   },
 }
