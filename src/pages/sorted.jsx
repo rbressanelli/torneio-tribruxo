@@ -11,7 +11,7 @@ import { StudentsContext } from "../contexts/students";
 import Head from "next/head";
 import api from "../services/api";
 
-const Sorted = ({renderProps}) => {
+const Sorted = ({dataProps}) => {
   const { chooseStudents } = useContext(StudentsContext);
 
   const handleAnotherSort = async () => {
@@ -27,7 +27,7 @@ const Sorted = ({renderProps}) => {
         <Title>Torneio Tribruxo</Title>
         <Button onClick={handleAnotherSort}>FAÇA UMA NOVA ESCOLHA</Button>
         <MainContainer>
-          <CharactersList renderList={renderProps}/>
+          <CharactersList renderList={dataProps}/>
         </MainContainer>
       </Main>
     </Container>

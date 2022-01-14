@@ -5,6 +5,9 @@ import { useContext } from "react";
 const CharactersList = ({renderList}) => {
   const { cardList } = useContext(StudentsContext);
 
+  if(cardList.length !== 0) {
+    renderList = undefined
+  }  
   return (
     <>
       {
