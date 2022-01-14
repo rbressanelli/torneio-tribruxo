@@ -47,7 +47,7 @@ const StudentsProvider = ({ children }) => {
 
   },[studentsList])
 
-
+  
   useEffect(() => {
     getStudentsFromApi()     
   }, [getStudentsFromApi])   

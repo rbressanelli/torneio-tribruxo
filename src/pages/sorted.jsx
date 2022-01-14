@@ -1,10 +1,17 @@
 import CharactersList from "../components/CharactersList";
-import { Button, Container, Main, MainContainer, Title } from "../styles/styles";
-import { useContext } from "react/cjs/react.development";
+import {
+  Button,
+  Container,
+  Main,
+  MainContainer,
+  Title,
+} from "../styles/styles";
+import { useContext } from "react";
 import { StudentsContext } from "../contexts/students";
 import Head from "next/head";
+import api from "../services/api";
 
-const Sorted = () => {
+const Sorted = ({dataProps}) => {
   const { chooseStudents } = useContext(StudentsContext);
 
   const handleAnotherSort = async () => {
@@ -17,16 +24,22 @@ const Sorted = () => {
         <title>Torneio TriBruxo</title>
       </Head>
       <Main>
-      <Title>Torneio Tribruxo</Title>
+        <Title>Torneio Tribruxo</Title>
         <Button onClick={handleAnotherSort}>FAÇA UMA NOVA ESCOLHA</Button>
-        {handleAnotherSort && (
-          <MainContainer>
-            <CharactersList />
-          </MainContainer>
-        )}
+        <MainContainer>
+          <CharactersList renderList={dataProps}/>
+        </MainContainer>
       </Main>
     </Container>
   );
 };
+
+export async function getStaticProps() {
+  const response = await api.get("/students/")
+  const dataProps = response.data.slice(0, 3)
+  return {
+    props: {dataProps}, // will be passed to the page component as props
+  }
+}
 
 export default Sorted;
