@@ -30,8 +30,7 @@ const Card = ({ characters }) => {
               alt={characters.name}
               width={180}
               height={180}
-              objectFit="cover"
-              placeholder=""
+              objectFit="cover"              
             />
           </div>
           <h3>{characters.actor}</h3>
