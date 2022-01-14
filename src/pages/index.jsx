@@ -20,11 +20,11 @@ const Home = () => {
 
   return(
     <Container>
+    
       <Head>
         <title>Torneio TriBruxo</title>
         <meta name="description" content="Torneio Tribruxo" />
-        <link rel="icon" href="/favicon.ico" />
-        
+        <link rel="icon" href="/favicon.ico" />        
       </Head>
 
       <Main>
@@ -38,7 +38,6 @@ const Home = () => {
         </div>
       </Main>
 
-      {/* <footer className={styles.footer}></footer> */}
     </Container>
   )
 }
