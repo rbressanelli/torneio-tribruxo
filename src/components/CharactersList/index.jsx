@@ -2,14 +2,21 @@ import Card from "../Card";
 import { StudentsContext } from "../../contexts/students";
 import { useContext } from "react";
 
-const CharactersList = () => {
+const CharactersList = ({renderList}) => {
   const { cardList } = useContext(StudentsContext);
 
   return (
     <>
-      {cardList.map((student, index) => (
+      {
+        renderList ? 
+        renderList.map((student, index) => (
         <Card key={index} characters={student} />
-      ))}
+      )) :
+        cardList.map((student, index) => (
+        <Card key={index} characters={student} />
+      ))
+      
+      }
     </>
   );
 };
