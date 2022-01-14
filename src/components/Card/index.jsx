@@ -29,8 +29,9 @@ const Card = ({ characters }) => {
               // loader={imageLoader}
               src={characters.image}
               alt={characters.name}
-              // width={180}
-              // height={180}
+              width={180}
+              height={180}
+              // layout="fill"
               objectFit="cover"              
             />
           </div>
