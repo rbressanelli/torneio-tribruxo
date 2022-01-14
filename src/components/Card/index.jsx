@@ -7,11 +7,6 @@ import Slyth from "../../assets/slytherin.png";
 
 const Card = ({ characters }) => {
 
-  const imageLoader = ({ src, width, height }) => {
-    return `${src}?w=${width}&h=${height}`;  
-    // return `${src}`  
-  };
-
   const charactersHouse = {
     Gryffindor: "gryffindor",
     Ravenclaw: "ravenclaw",
@@ -25,18 +20,15 @@ const Card = ({ characters }) => {
         <CardContainer className={charactersHouse[characters.house]}>
           <h3>{characters.name}</h3>
           <div>
-            <ImageContainer
-              // loader={imageLoader}
+            <ImageContainer              
               src={characters.image}
               alt={characters.name}
               width={180}
-              height={180}
-              // layout="fill"
+              height={180}              
               objectFit="cover"              
             />
           </div>
           <h3>{characters.actor}</h3>
-          <h3>{characters.house}</h3>
           <div>
             <Image
               src={
@@ -53,6 +45,7 @@ const Card = ({ characters }) => {
               height={70}
             />
           </div>
+          <h3>{characters.house}</h3>
         </CardContainer>
       )}
     </Container>

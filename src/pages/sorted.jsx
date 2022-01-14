@@ -38,7 +38,7 @@ export async function getStaticProps() {
   const response = await api.get("/students/")
   const dataProps = response.data.slice(0, 3)
   return {
-    props: {dataProps}, // will be passed to the page component as props
+    props: {dataProps}, 
   }
 }
 
