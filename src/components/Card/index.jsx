@@ -25,7 +25,7 @@ const Card = ({ characters }) => {
         <CardContainer className={charactersHouse[characters.house]}>
           <h3>{characters.name}</h3>
           <div>
-            <Image
+            <ImageContainer
               // loader={imageLoader}
               src={characters.image}
               alt={characters.name}
