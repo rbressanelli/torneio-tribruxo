@@ -1,6 +1,12 @@
 import CharactersList from "../components/CharactersList";
-import { Button, Container, Main, MainContainer, Title } from "../styles/styles";
-import { useContext } from "react/cjs/react.development";
+import {
+  Button,
+  Container,
+  Main,
+  MainContainer,
+  Title,
+} from "../styles/styles";
+import { useContext } from "react";
 import { StudentsContext } from "../contexts/students";
 import Head from "next/head";
 
@@ -17,13 +23,11 @@ const Sorted = () => {
         <title>Torneio TriBruxo</title>
       </Head>
       <Main>
-      <Title>Torneio Tribruxo</Title>
+        <Title>Torneio Tribruxo</Title>
         <Button onClick={handleAnotherSort}>FAÇA UMA NOVA ESCOLHA</Button>
-        {handleAnotherSort && (
-          <MainContainer>
-            <CharactersList />
-          </MainContainer>
-        )}
+        <MainContainer>
+          <CharactersList />
+        </MainContainer>
       </Main>
     </Container>
   );
