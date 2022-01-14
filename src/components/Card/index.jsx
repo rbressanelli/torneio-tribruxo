@@ -26,11 +26,11 @@ const Card = ({ characters }) => {
           <h3>{characters.name}</h3>
           <div>
             <Image
-              loader={imageLoader}
+              // loader={imageLoader}
               src={characters.image}
               alt={characters.name}
-              width={180}
-              height={180}
+              // width={180}
+              // height={180}
               objectFit="cover"              
             />
           </div>
