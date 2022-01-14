@@ -8,8 +8,8 @@ import Slyth from "../../assets/slytherin.png";
 const Card = ({ characters }) => {
 
   const imageLoader = ({ src, width, height }) => {
-    // return `${src}?w=${width}&h=${height}`;  
-    return `${src}`  
+    return `${src}?w=${width}&h=${height}`;  
+    // return `${src}`  
   };
 
   const charactersHouse = {
@@ -25,7 +25,7 @@ const Card = ({ characters }) => {
         <CardContainer className={charactersHouse[characters.house]}>
           <h3>{characters.name}</h3>
           <div>
-            <ImageContainer
+            <Image
               loader={imageLoader}
               src={characters.image}
               alt={characters.name}
