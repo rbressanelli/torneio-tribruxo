@@ -2,17 +2,19 @@ import Head from "next/head";
 import { Button, Container, Div, Main, Title } from "../styles/styles";
 import { useRouter } from "next/router";
 import { StudentsContext } from "../contexts/students";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import gryffindor from "../assets/gryffindor.png";
 import hufflepuff from "../assets/hufflepuff.png";
 import ravenclaw from "../assets/ravenclaw.png";
 import slytherin from "../assets/slytherin.png";
 import hogwarts from "../assets/hogwarts.png";
 import Image from "next/image";
+import InfoModal from "../components/InfoModal";
 
 const Home = () => {
   const route = useRouter();
   const { chooseStudents } = useContext(StudentsContext);
+  const [showModal, setShowModal] = useState(false);
 
   const chooseStudentsHandle = async () => {
     await chooseStudents();
@@ -28,7 +30,16 @@ const Home = () => {
       </Head>
 
       <Main>
-        <Image src={hogwarts} alt="hogwarts" width={150} height={150} />
+        <InfoModal show={showModal} handleClick={setShowModal} />
+        <button style={{ background: "transparent", border: "transparent" }}>
+          <Image
+            onClick={() => setShowModal(!showModal)}
+            src={hogwarts}
+            alt="hogwarts"
+            width={150}
+            height={150}
+          />
+        </button>
         <Title>TORNEIO TRIBRUXO</Title>
 
         <Button onClick={chooseStudentsHandle}>ESCOLHA OS ALUNOS</Button>

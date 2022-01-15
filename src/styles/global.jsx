@@ -23,8 +23,12 @@ export const GlobalStyle = createGlobalStyle`
 export const theme = {
   colors: {
     primary: '#0070f3',
+    secondary: '#d7263d',
     title: '#f5f5f5',
     background: '#214181',
-    cardBorder: '#cd9c32'
+    cardBorder: '#cd9c32',
+    modalBorderTop: '#8C001A',
+    modalBorderBotton: '#285238',
+    modalShadow: '#0a0a0a',
   },
 }
