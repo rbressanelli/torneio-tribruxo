@@ -5,8 +5,16 @@ export const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.colors.title};
   margin: 5px;
-  text-shadow: 0px 0px 39px rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(213,176,25,1);
 `
+
+export const SubTitle = styled.h3`
+  font-size: 20px;
+  color: ${({ theme }) => theme.colors.title};
+  margin: 10px 0;
+  text-shadow: 0px 0px 10px rgba(0,0,0,1);
+`
+
 export const Button = styled.button`
     background-image: linear-gradient(to right, #e52d27 0%, #871717  51%, #e52d27  100%)}        
     margin: 10px;
@@ -19,7 +27,7 @@ export const Button = styled.button`
     font-weight: bold;           
     box-shadow: 0 0 20px #eee;
     border-radius: 30px;
-    border: 4px solid #8b730f;
+    border: 6px solid #8b730f;
     margin: 50px 0;
     display: block;        
 
@@ -43,15 +51,15 @@ export const MainContainer = styled.div`
 export const CardContainer = styled.div`
   width: 250px;
   height: 400px;
-  border: 2px solid #000;
-  border-radius: 10px;
-  /* margin: 0 10px; */
+  border: 4px solid ${({ theme }) => theme.colors.cardBorder};
+  border-radius: 10px;  
   animation-name: initialEffect;
   animation-duration: 1s;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  justify-content: center;
+  padding: 10px;
 
   @keyframes initialEffect {
     0% {
@@ -77,10 +85,10 @@ export const CardContainer = styled.div`
   }
 
   &.slytherin {
-    background: #0f9e43;
-    background: linear-gradient(132deg, #0f9e43 0%, #00ff00 70%);
-    background: -webkit-linear-gradient(132deg, #0f9e43 0%, #00ff00 70%);
-    background: -moz-linear-gradient(132deg, #0f9e43 0%, #00ff00 70%);
+    background: #075423;
+    background: linear-gradient(132deg, #075423 0%, #2bc81d 70%);
+    background: -webkit-linear-gradient(132deg, #075423 0%, #2bc81d 70%);
+    background: -moz-linear-gradient(132deg, #075423 0%, #2bc81d 70%);
   }
 
   &.hufflepuff {
@@ -92,19 +100,12 @@ export const CardContainer = styled.div`
 `;
 
 export const ImageContainer = styled(Image)`
-  border-radius: 50%;
-  box_shadow: 2px 2px 2px 10px #000;
+  border-radius: 50%;  
 `;
 
 export const Container = styled.div`
   padding: 0 2rem;
-  background-color: #214181;
-
-  @media screen only and (min-width: 400px){
-    display: flex;
-    justify-content: center;
-  }
-  @media screen only and (min-width: 800px){}
+  background-color: ${({ theme }) => theme.colors.background};   
 `;
 
 export const Main = styled.main`
@@ -114,5 +115,13 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
+`
+
+export const Div = styled.div`
+  display: flex;
+  
+  &>div{
+    margin: 0 10px;
+  }
 `
