@@ -13,13 +13,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-      text-decoration: none
+      text-decoration: none;
+      font-variant: small-caps;
+      margin: 10px 0;
+      color: white;
   }
 `
 
 export const theme = {
   colors: {
     primary: '#0070f3',
-    title: '#f5f5f5'
+    title: '#f5f5f5',
+    background: '#214181',
+    cardBorder: '#cd9c32'
   },
 }
