@@ -125,3 +125,45 @@ export const Div = styled.div`
     margin: 0 10px;
   }
 `
+
+export const Modal = styled.div`
+    top: 20%;
+    max-width: 50vw;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    border-top: 10px solid ${({ theme }) => theme.colors.modalBorderTop};
+    border-bottom: 10px solid ${({ theme }) => theme.colors.modalBorderBotton};
+    font-size: 18px;
+    box-shadow: 1px 1px 30px 5px ${({ theme }) => theme.colors.modalShadow};
+    z-index: 1;
+    padding: 20px;    
+
+    &>button {
+      font-size: 30px;
+      font-weight: 900;
+      color: ${({ theme }) => theme.colors.primary};
+      border-color: ${({ theme }) => theme.colors.primary};
+      border-radius: 50%;
+      padding: 1px 8px;
+      position: absolute;
+      right: -20px;
+      top: -20px;
+
+      :hover {
+        filter: brightness(0.8);
+        transform: scale(1.1);
+        color: ${({ theme }) => theme.colors.secondary};
+        border-color: ${({ theme }) => theme.colors.secondary};
+      }
+    }
+
+    &>p {
+      margin: 5px 0;
+      line-height: 1.4;
+    }
+`
