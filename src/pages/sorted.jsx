@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { StudentsContext } from "../contexts/students";
 import Head from "next/head";
 import api from "../services/api";
+import Link from "next/link";
 
 const Sorted = ({dataProps}) => {
   const { chooseStudents } = useContext(StudentsContext);
@@ -21,7 +22,7 @@ const Sorted = ({dataProps}) => {
   return (
     <Container>
       <Head>
-        <title>Torneio TriBruxo</title>
+        <title>Sorteados</title>
       </Head>
       <Main>
         <Title>Torneio Tribruxo</Title>
@@ -29,6 +30,9 @@ const Sorted = ({dataProps}) => {
         <MainContainer>
           <CharactersList renderList={dataProps}/>
         </MainContainer>
+        <Link href="/">
+          <a>back to home</a>
+        </Link>
       </Main>
     </Container>
   );

@@ -1,4 +1,4 @@
-import { CardContainer, Container, ImageContainer } from "../../styles/styles";
+import { CardContainer, Container, ImageContainer, SubTitle } from "../../styles/styles";
 import Image from "next/image";
 import Gryff from "../../assets/gryffindor.png";
 import Huff from "../../assets/hufflepuff.png";
@@ -18,7 +18,7 @@ const Card = ({ characters }) => {
     <Container>
       {characters && (
         <CardContainer className={charactersHouse[characters.house]}>
-          <h3>{characters.name}</h3>
+          <SubTitle>{characters.name}</SubTitle>
           <div>
             <ImageContainer              
               src={characters.image}
@@ -28,7 +28,7 @@ const Card = ({ characters }) => {
               objectFit="cover"              
             />
           </div>
-          <h3>{characters.actor}</h3>
+          <SubTitle>{characters.actor}</SubTitle>
           <div>
             <Image
               src={
@@ -45,7 +45,7 @@ const Card = ({ characters }) => {
               height={70}
             />
           </div>
-          <h3>{characters.house}</h3>
+          <SubTitle>{characters.house}</SubTitle>
         </CardContainer>
       )}
     </Container>
