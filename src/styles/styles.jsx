@@ -149,7 +149,8 @@ export const Modal = styled.div`
       color: ${({ theme }) => theme.colors.primary};
       border-color: ${({ theme }) => theme.colors.primary};
       border-radius: 50%;
-      padding: 1px 8px;
+      width: 45px;
+      height: 45px;
       position: absolute;
       right: -20px;
       top: -20px;
