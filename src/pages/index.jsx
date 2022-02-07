@@ -31,7 +31,7 @@ const Home = () => {
 
       <Main>
         <InfoModal show={showModal} handleClick={setShowModal} />
-        <button style={{ background: "transparent", border: "transparent" }}>
+        <button className='modalButton' style={{ background: "transparent", border: "transparent" }}>
           <Image
             onClick={() => setShowModal(!showModal)}
             src={hogwarts}
