@@ -4,12 +4,12 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
     "cypress:open": "cypress open"
   },
   "dependencies": {
     "axios": "^0.24.0",
     "cypress": "^9.4.1",
-    "eslint": "^8.8.0",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -17,16 +17,12 @@
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
-    "eslint-plugin-cypress": "^2.12.1"
+    "babel-plugin-styled-components": "^1.12.0"
   },
   "eslintConfig": {
-      "extends": [
-        "react-app",
-        "react-app/jest",
-        "plugin:cypress/recommended"
-      ]
-      
+    "extends": [
+      "plugin:cypress/recommended"
+    ]
   },
   "name": "torneio-tribruxo",
   "version": "1.0.0",
