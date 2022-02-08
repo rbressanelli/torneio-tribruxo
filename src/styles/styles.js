@@ -1,19 +1,20 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import Image from "next/image";
 
 export const Title = styled.h1`
   font-size: 50px;
+  text-align: center;
   color: ${({ theme }) => theme.colors.title};
   margin: 5px;
-  text-shadow: 0px 0px 50px rgba(213,176,25,1);
-`
+  text-shadow: 0px 0px 50px rgba(213, 176, 25, 1);
+`;
 
 export const SubTitle = styled.h3`
   font-size: 20px;
   color: ${({ theme }) => theme.colors.title};
   margin: 10px 0;
-  text-shadow: 0px 0px 10px rgba(0,0,0,1);
-`
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+`;
 
 export const Button = styled.button`
     background-image: linear-gradient(to right, #e52d27 0%, #871717  51%, #e52d27  100%)}        
@@ -46,13 +47,23 @@ export const Button = styled.button`
 
 export const MainContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: 400px) {
+  }
+
+  @media only screen and (min-width: 800px) {
+    flex-direction: row;
+  }
 `;
 
 export const CardContainer = styled.div`
   width: 250px;
   height: 400px;
   border: 4px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 10px;  
+  border-radius: 10px;
   animation-name: initialEffect;
   animation-duration: 1s;
   display: flex;
@@ -60,6 +71,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 10px;
+  margin: 10px 0;
 
   @keyframes initialEffect {
     0% {
@@ -100,12 +112,12 @@ export const CardContainer = styled.div`
 `;
 
 export const ImageContainer = styled(Image)`
-  border-radius: 50%;  
+  border-radius: 50%;
 `;
 
 export const Container = styled.div`
-  padding: 0 2rem;
-  background-color: ${({ theme }) => theme.colors.background};   
+  padding: 0 1rem;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const Main = styled.main`
@@ -115,45 +127,71 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
-`
+  align-items: center;
+`;
 
 export const Div = styled.div`
   display: flex;
-  
-  &>div{
+
+  & > div {
     margin: 0 10px;
   }
-`
+`;
 
 export const Modal = styled.div`
-    top: 20%;
-    max-width: 50vw;
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 20px;
-    border-top: 10px solid ${({ theme }) => theme.colors.modalBorderTop};
-    border-bottom: 10px solid ${({ theme }) => theme.colors.modalBorderBotton};
-    font-size: 18px;
-    box-shadow: 1px 1px 30px 5px ${({ theme }) => theme.colors.modalShadow};
-    z-index: 1;
-    padding: 20px;    
+  max-width: 70vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  visibility: ${(props) =>
+    props.visibility === "true" ? "visible" : "hidden"};
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  border-top: 10px solid ${({ theme }) => theme.colors.modalBorderTop};
+  border-bottom: 10px solid ${({ theme }) => theme.colors.modalBorderBotton};
+  font-size: 18px;
+  box-shadow: 1px 1px 30px 5px ${({ theme }) => theme.colors.modalShadow};
+  z-index: 1;
+  padding: 20px;
 
-    &>button {
-      font-size: 30px;
-      font-weight: 900;
-      color: ${({ theme }) => theme.colors.primary};
-      border-color: ${({ theme }) => theme.colors.primary};
-      border-radius: 50%;
-      padding: 1px 8px;
-      position: absolute;
-      right: -20px;
-      top: -20px;
+  ::-webkit-scrollbar {
+    width: 5px;    
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px red;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.modalBorderTop};
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.colors.secondary};
+  }
 
+  @media only screen and (min-width: 400px) {
+  }
+  @media only screen and (min-width: 767px) {
+    max-width: 60vw;
+  }
+
+  & > button {
+    font-size: 30px;
+    font-weight: 900;
+    color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
+    border-radius: 50%;
+    padding: 1px 8px;
+
+    @media only screen and (min-width: 400px) {
+    }
+
+    @media only screen and (min-width: 767px) {
       :hover {
         filter: brightness(0.8);
         transform: scale(1.1);
@@ -161,9 +199,10 @@ export const Modal = styled.div`
         border-color: ${({ theme }) => theme.colors.secondary};
       }
     }
+  }
 
-    &>p {
-      margin: 5px 0;
-      line-height: 1.4;
-    }
-`
+  & > p {
+    margin: 5px 0;
+    line-height: 1.4;
+  }
+`;
