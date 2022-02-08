@@ -3,7 +3,9 @@ import { Modal } from "../../styles/styles";
 const InfoModal = ({ show, handleClick }) => {
   return (
     <>
-      <Modal style={{ visibility: show ? "visible" : "hidden" }}>
+      <Modal 
+        visibility={show.toString()}         
+        >
         <h1>História</h1>
         <p>
           O Torneio Tribruxo é um campeonato entre as três maiores escolas de
