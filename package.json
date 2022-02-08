@@ -21,7 +21,12 @@
     "eslint-plugin-cypress": "^2.12.1"
   },
   "eslintConfig": {
-      "extends": "plugin:cypress/recommended"
+      "extends": [
+        "react-app",
+        "react-app/jest",
+        "plugin:cypress/recommended"
+      ]
+      
   },
   "name": "torneio-tribruxo",
   "version": "1.0.0",
