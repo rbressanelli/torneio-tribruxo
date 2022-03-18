@@ -1,4 +1,4 @@
-# Shop-cart
+# Torneio TriBruxo
 
 ## Descrição do Projeto
 
