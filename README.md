@@ -1,3 +1,5 @@
+# Torneio TriBruxo
+
 ## Descrição do Projeto
 
 <h1 align="center">
