@@ -1,5 +1,3 @@
-# Shop-cart
-
 ## Descrição do Projeto
 
 <h1 align="center">
@@ -14,15 +12,15 @@
 <p align="center">
   <a href="#objetivo">Objetivo</a> <br />
   <a href="#description">Descrição</a> <br />
-  <a href="#use">Como utilizar</a> <br />
+  <a href="#como">Como instalar</a> <br />
   <a href="#status">Status do Projeto</a> <br />
   <a href="#deploy">Link do deploy no Vercel</a> <br />
-  <a href="#tech">Tecnologias Utilizadas</a> <br />
+  <a href="#tech">Tecnologias e Ferramentas Utilizadas</a> <br />
   <a href="#author">Autor</a> <br />
 </p>
 
-<h2 id="objetivo">Objetivo</h2>
 
+<h2 id="objetivo">Objetivo</h2>
 O aplicativo realiza o sorteio de 3 personagens dentre 11 possíveis para o torneio Tribruxo.
 
 <h2 id="description">Descrição</h2>
@@ -42,7 +40,7 @@ Clicando no botão central da home page o sorteio é realizado e uma nova págin
 
 Pode-se escolher um novo sorteio ou a volta para a home page.
 
-<h2 id="use">Como Instalar</h2>
+<h2 id="como">Como Instalar</h2>
 
 Ao acessar o repositório pode-se clonar o aplicativo.
 
@@ -64,11 +62,13 @@ $ **yarn start**
 
 No seu navegador vá para o endereço:  http://localhost:3000/
 
+
+
 <h2 id="status">Status do Projeto</h2>
-<p>Projeto já finalizado e funcional</p>
+Projeto já finalizado e funcional
 
 <h2 id="deploy">Link do deploy com o aplicativo funcional</h2>
-<p><a href="https://torneio-tribruxo-zeta.vercel.app/">Torneio TriBruxo</a></p>
+<a href="https://torneio-tribruxo-zeta.vercel.app/">Torneio TriBruxo</a>
 
 <h2 id="tech">🛠 Tecnologias e Ferramentas</h2>
 <ul>
